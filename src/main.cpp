@@ -128,13 +128,13 @@ void loop(){
 
 
   String url = String("http://")+ host + String(":")+httpPort + "/write?db=temp_test";
-  String payload = "air_monitoring,measuretype=temperature,unit=Celsius value=" + String(temperature);
+  String payload = "air_monitoring,position=livingroom,measuretype=temperature,unit=Celsius value=" + String(temperature);
   sendPost( url, payload);
 
-  payload = "air_monitoring,measuretype=humidity,unit=% value=" + String(humidity);
+  payload = "air_monitoring,position=livingroom,measuretype=humidity,unit=% value=" + String(humidity);
   sendPost( url, payload);
 
-  payload = "air_monitoring,measuretype=ppm,uint=ug/m^3 value=" + String(density);
+  payload = "air_monitoring,position=livingroom,measuretype=ppm,uint=ug/m^3 value=" + String(density);
   sendPost( url, payload);
 
   delay( 30 * 1000);
